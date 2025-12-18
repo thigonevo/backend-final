@@ -52,7 +52,7 @@
 
 ###
 
-<p align="left"></p>
+<p align="left">@app.post("/usuarios")<br>def crear_usuario (usuario:Usuario):<br>    if usuario.contraseña != usuario.repetir_contraseña:<br>        return "Las contraseñas no coinciden"<br>    del usuario.repetir_contraseña<br>    db.collection("usuarios").add(usuario.dict())<br>    return "usuario creado con exito"<br><br>lo que hace la línea @app.post("/usuarios") indica que esta función se ejecutará cuando alguien envíe una solicitud de tipo POST a la dirección /usuarios. Los métodos POST se usan normalmente para crear nuevos recursos. <br>Si todo sale bien, la función termina devolviendo el texto "usuario creado con exito".</p>
 
 ###
 
