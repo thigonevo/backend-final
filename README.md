@@ -44,6 +44,18 @@
 
 ###
 
+<p align="left">a continuación paso a explicar las funciones del código que es de lo mas importante para la funcionalidad del proyecto <br><br>from fastapi import FastAPI<br>import firebase_admin<br>from firebase_admin import credentials, firestore<br><br>esas 3 líneas que son la base del proyecto son las herramientas para abrir un servidor (FastAPI) y conectarlo de forma segura a tu base de datos de Google (Firebase).</p>
+
+###
+
+<p align="left">y ahora paso a explicar el codigo de una de las rutas de una coleccion de la base de datos:<br><br>@app.get("/usuarios")<br>def obtener_usuarios():<br>    collection = db.collection("usuarios").stream()<br>    return [c.to_dict() for c in collection]<br><br>esto lo que hace es darnos en la pagina o el servidor, cuando entras a esa ruta, el código te devuelve una lista limpia de todos tus usuarios que vendria a estar en la firebase.</p>
+
+###
+
+<p align="left"></p>
+
+###
+
 <p align="left">Cerca de lo final conectamos el backend(lo que sucede detrás de escena y que el usuario nunca ve directamente) y el frontend(Es todo lo que el usuario puede ver, tocar, hacer clic y experimentar en su pantalla) pero antes de esohacemos lo siguiente en firebase (plataforma de google con servivio database y mas).</p>
 
 ###
